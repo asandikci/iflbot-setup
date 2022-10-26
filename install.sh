@@ -8,6 +8,7 @@ wget https://github.com/asandikci/iflbot-setup/archive/refs/heads/main.tar.gz
 tar -xzvf main.tar.gz
 cd iflbot-setup-main || exit
 cd src || exit
+ls
 chmod +x prerequisites.sh
 chmod +x applications.sh
 bash .prerequisites.sh
