@@ -24,6 +24,6 @@ bash applications.sh
 EX_PATH="$CUR_HOME"/.vscode/extensions/
 mkdir -p "$EX_PATH"
 cp -r danielpinto8zz6.c-cpp-compile-run-1.0.18 "$EX_PATH"
-cd || exit
+cd "$CUR_HOME" || exit
 rm -r tmp_install
 echo "INSTALLATION SUCCESSFULLY COMPLETED"
