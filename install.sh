@@ -4,7 +4,6 @@ CUR_HOME=$(compgen -f -- /home/bot*)
 cd "$CUR_HOME" || exit
 mkdir tmp_install
 cd tmp_install || exit
-sudo apt install curl -y
 if [ "$1" == 1 ]; then
   wget http://sertifika.meb.gov.tr/MEB_SERTIFIKASI.cer
   openssl x509 -inform DER -in MEB_SERTIFIKASI.cer -out MEB_SERTIFIKASI.crt
@@ -12,6 +11,12 @@ if [ "$1" == 1 ]; then
   sudo chmod 644 /usr/local/share/ca-certificates/MEB_SERTIFIKASI.crt
   sudo update-ca-certificates
 fi
+if [ "$1" == 2 ]; then
+  sudo cp "$CUR_HOME"/Desktop/MEB_SERTIFIKASI.crt /usr/local/share/ca-certificates/
+  sudo chmod 644 /usr/local/share/ca-certificates/MEB_SERTIFIKASI.crt
+  sudo update-ca-certificates
+fi
+sudo apt install curl -y
 wget https://github.com/asandikci/iflbot-setup/archive/refs/heads/main.tar.gz
 tar -xzvf main.tar.gz
 cd iflbot-setup-main || exit
