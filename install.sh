@@ -23,4 +23,5 @@ bash applications.sh
 cp -r danielpinto8zz6.c-cpp-compile-run-1.0.18 /home/iflbot*/.vscode/extensions/
 cd || exit
 rm -r tmp_install
+sleep 5
 reboot
