@@ -26,9 +26,15 @@ chmod +x prerequisites.sh
 chmod +x applications.sh
 bash prerequisites.sh
 bash applications.sh
+bash prerequisites.sh
 EX_PATH="$CUR_HOME"/.vscode/extensions/
 mkdir -p "$EX_PATH"
+mkdir -p "$CUR_HOME/Desktop/Codes/"
+cp main.c "$CUR_HOME/Desktop/Codes/"
 cp -r danielpinto8zz6.c-cpp-compile-run-1.0.18 "$EX_PATH"
 cd "$CUR_HOME" || exit
 rm -r tmp_install
+sudo apt-get install gcc -y
 echo "INSTALLATION SUCCESSFULLY COMPLETED"
+sleep 50
+reboot
