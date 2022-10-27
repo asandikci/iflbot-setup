@@ -1,7 +1,7 @@
 #!/bin/bash
 # installation script
-
-cd || exit
+Hhome=/home/"$USER"/
+cd "$Hhome" || exit
 mkdir tmp_install
 cd tmp_install || exit
 sudo apt install curl -y
@@ -19,9 +19,9 @@ cd src || exit
 ls
 chmod +x prerequisites.sh
 chmod +x applications.sh
-bash .prerequisites.sh
-bash .applications.sh
-cp franneck94.c-cpp-runner-4.1.2 /home/"$USER"/.vscode/extensions/
+bash prerequisites.sh
+bash applications.sh
+cp -r franneck94.c-cpp-runner-4.1.2 /home/"$USER"/.vscode/extensions/
 cd || exit
 rm -r tmp_install
 rmdir tmp_install
