@@ -1,6 +1,7 @@
 #!/bin/bash
 # installation script
-cd "$HOME" || exit
+CUR_HOME=$(compgen -f -- /home/bot*)
+cd "$CUR_HOME" || exit
 mkdir tmp_install
 cd tmp_install || exit
 sudo apt install curl -y
@@ -20,7 +21,9 @@ chmod +x prerequisites.sh
 chmod +x applications.sh
 bash prerequisites.sh
 bash applications.sh
-COMPREPLYa=$(compgen -f -- /home/bot*/.vscode/extensions)
-cp -r danielpinto8zz6.c-cpp-compile-run-1.0.18 "$COMPREPLYa"
+EX_PATH="$CUR_HOME"/.vscode/extensions/
+mkdir -p "$EX_PATH"
+cp -r danielpinto8zz6.c-cpp-compile-run-1.0.18 "$EX_PATH"
 cd || exit
 rm -r tmp_install
+echo "INSTALLATION SUCCESSFULLY COMPLETED"
