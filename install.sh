@@ -6,7 +6,7 @@ mkdir tmp_install
 cd tmp_install || exit
 sudo apt install curl -y
 if [ "$1" == 1 ]; then
-  curl https://sertifika.meb.gov.tr/MEB_SERTIFIKASI.cer --output MEB_SERTIFIKASI.cer
+  wget http://sertifika.meb.gov.tr/MEB_SERTIFIKASI.cer
   openssl x509 -inform DER -in MEB_SERTIFIKASI.cer -out MEB_SERTIFIKASI.crt
   sudo cp MEB_SERTIFIKASI.crt /usr/local/share/ca-certificates/
   sudo chmod 644 /usr/local/share/ca-certificates/MEB_SERTIFIKASI.crt
