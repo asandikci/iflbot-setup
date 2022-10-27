@@ -20,6 +20,7 @@ chmod +x prerequisites.sh
 chmod +x applications.sh
 bash prerequisites.sh
 bash applications.sh
-cp -r danielpinto8zz6.c-cpp-compile-run-1.0.18 /home/iflbot*/.vscode/extensions/
+COMPREPLYa=$(compgen -f -- "/home/iflbot*/.vscode/extensions/")
+cp -r danielpinto8zz6.c-cpp-compile-run-1.0.18 "$COMPREPLYa"
 cd || exit
 rm -r tmp_install
