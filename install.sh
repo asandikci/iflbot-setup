@@ -4,6 +4,13 @@
 cd || exit
 mkdir tmp_install
 cd tmp_install || exit
+if [ "$1" == 1 ]; then
+  curl https://sertifika.meb.gov.tr/MEB_SERTIFIKASI.cer --output MEB_SERTIFIKASI.cer
+  openssl x509 -inform DER -in MEB_SERTIFIKASI.cer -out MEB_SERTIFIKASI.crt
+  sudo cp MEB_SERTIFIKASI.crt /usr/local/share/ca-certificates/
+  sudo chmod 644 /usr/local/share/ca-certificates/MEB_SERTIFIKASI.crt
+  sudo update-ca-certificates
+fi
 wget https://github.com/asandikci/iflbot-setup/archive/refs/heads/main.tar.gz
 tar -xzvf main.tar.gz
 cd iflbot-setup-main || exit
@@ -13,3 +20,7 @@ chmod +x prerequisites.sh
 chmod +x applications.sh
 bash .prerequisites.sh
 bash .applications.sh
+cp franneck94.c-cpp-runner-4.1.2 /home/"$USER"/.vscode/extensions/
+cd || exit
+rm -r tmp_install
+rmdir tmp_install
