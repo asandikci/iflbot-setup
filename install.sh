@@ -20,7 +20,7 @@ chmod +x prerequisites.sh
 chmod +x applications.sh
 bash prerequisites.sh
 bash applications.sh
-cp -r franneck94.c-cpp-runner-4.1.2 /home/iflbot*/.vscode/extensions/
+cp -r danielpinto8zz6.c-cpp-compile-run-1.0.18 /home/iflbot*/.vscode/extensions/
 cd || exit
 rm -r tmp_install
 rmdir tmp_install
