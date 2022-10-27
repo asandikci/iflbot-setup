@@ -22,7 +22,6 @@ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" -y
 sudo apt install code -y
 sudo apt update -y
-sudo apt upgrade -y
 
 #Chrome https://askubuntu.com/questions/510056/how-to-install-google-chrome
 wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O /tmp/google.pub
@@ -36,3 +35,4 @@ sudo apt-get install gedit -y
 
 #gnome-disk-utility
 sudo apt-get install gnome-disk-utility -y
+sudo apt upgrade -y
