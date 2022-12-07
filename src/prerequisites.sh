@@ -1,7 +1,6 @@
 #!/bin/bash
 # prerequisites
 
-sudo apt-get install apt-transport-https -y
-sudo apt install software-properties-common wget -y
-sudo apt install gcc -y
-sudo apt install build-essential -y
+sudo apt-get install curl wget apt-transport-https -y
+sudo apt install software-properties-common  -y
+sudo apt install gcc build-essential cmake make g++ -y
