@@ -3,7 +3,7 @@
 
 ### Download & Install
 ```bash
-wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.sh | bash <(cat) </dev/tty
 ```
 
 ### Features
