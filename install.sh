@@ -4,7 +4,7 @@
 # 2022 - 2023 © Aliberk Sandıkçı
 
 # run quickly:
-# curl https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.sh | bash
+# wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.sh | bash <(cat) </dev/tty
 
 # Error Handling
 set -e
@@ -68,6 +68,10 @@ _sudo() {
 
 #feature rich logs with color support
 _log() {
+  case "$3" in
+  newline) echo " " ;;
+  esac
+
   case "$2" in
   fatal | panic)
     echo -e "${RED}[ ⚠⚠⚠ ]${NC} $1 ${RED}ABORTING...${NC}"
@@ -116,9 +120,9 @@ _continue_confirmation() {
 
 #temporasy development playground
 _TMP_DEV() {
-  echo -e "\n\nGELIŞTIRICI FONKSIYONU CALISTIRILDI\n"
+  _log "\n\n --- Geliştirici Fonksiyonu Başlatıldı ---\n" info
 
-  echo -e "\nGELIŞTIRICI FONKSIYONU BITTI!!!\n\n"
+  _log "\n --- Geliştirici Fonksiyonu Sonlandırıldı ---\n\n" info
 }
 
 #prechecks for starting script
@@ -175,21 +179,48 @@ _download() {
 #install packages
 _install() {
   if [ -f "$src_dir/prerequisites.sh" ]; then
-    _log "Öngereklilikler Yükleniyor..." info
+    _log "Öngereklilikler Yükleniyor..." verbose
     _sudo bash "$src_dir/prerequisites.sh"
+    _log "Öngereklilikler Yüklendi" info
   fi
   if [ -f "$src_dir/applications.sh" ]; then
-    _log "Uygulamalar Yükleniyor..." info
-    _sudo bash "$src_dir/applications.sh"
+    _log "Uygulamaları yüklemek istiyor musunuz?"
+    if _checkanswer -eq 1; then
+      _log "Uygulamalar Yükleniyor..." verbose
+      _sudo bash "$src_dir/applications.sh"
+      _log "Uygulamalar Yüklendi" info
+    fi
   fi
   if [ -f "$src_dir/config.sh" ]; then
-    _log "Ayarlar yapılandırılıyor" info
-    _sudo bash "$src_dir/config.sh"
+    _log "Sistemi ayarlamak için ilgili yapılandırmaları yapmak istiyor musunuz?"
+    if _checkanswer -eq 1; then
+      _log "Yapılandırmalar Uygulanıyor..." verbose
+      _sudo bash "$src_dir/config.sh"
+      _log "Yapılandırmalar Uygulandı" info
+    fi
+  fi
+  if [ -f "$src_dir/system-refresh.sh" ]; then
+
+    _log "Sistemi güncellemeyi, yenilemeyi ve yeniden başlatmayı istiyor musunuz musunuz?"
+    if _checkanswer -eq 1; then
+      _log "Sistem Güncellemeleri Yükleniyor..." verbose
+      _sudo bash "$src_dir/system-refresh.sh"
+      _log "Sistem Güncellemeleri Yüklendi ve Sistem Yenilendi" info
+      
+
+      sleep 1
+      _log "Yükleme İşlemi Tamamlandı" "DONE"
+      sleep 1
+      _log "Sisteminiz 2 dakika içinde yeniden başlatılacaktır" err
+      sleep 60
+      rm -rf "$temp_file" "$temp_dir"
+      sleep 60
+      reboot
+    fi
   fi
 
   sleep 1
   _log "Yükleme İşlemi Tamamlandı" "DONE"
-  _log "gerekli ayarları yapmak için ${BOLD}iflbot-config${NC} programını çalıştırabilirsiniz" info
 }
 
 #clear cache, delete temporary files
@@ -202,7 +233,7 @@ _cleanup() {
 
 #interrupted by user
 _interrupt() {
-  _log "Betik kullanıcı tarafından erken sonlandırılıyor" err
+  _log "Betik kullanıcı tarafından erken sonlandırılıyor" err newline
   _cleanup
 }
 

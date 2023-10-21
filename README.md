@@ -16,11 +16,6 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
 ### LICENSE
 - GNU GPLv3+
 
-### IFLBOT Apps Collection
-- IFLBOT Setup (this file)
-- IFLBOT Config (for configuring)
-- IFLBOT Freeze (Lock & Unlock Device Status)
-
 ### TODO
 - [ ] Firefox Auto Configurations
 - [ ] Sublime Auto Configurations
@@ -31,5 +26,6 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
   - [ ] Dark Theme
 - [ ] XFCE Panel Configurations
   - [ ] Panel Size: 28px
-- [ ] Ability to change Display Name / Username / Computer Name
 - [ ] Disable annoying bell sound (in each restart)
+
+- [ ] End-of-life after [LabManage](https://git.aliberksandikci.com.tr/asandikci/labmanage) application ready-to-use

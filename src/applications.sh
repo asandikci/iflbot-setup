@@ -11,6 +11,3 @@ sudo apt install xournalpp -y
 
 #VS Codium https://github.com/VSCodium/vscodium/
 sudo apt install codium -y
-
-### Upgrade
-sudo apt upgrade -y
