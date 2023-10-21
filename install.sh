@@ -76,7 +76,7 @@ _log() {
   error | err) echo -e "${RED}[ !!! ]${NC} $1" ;;
   warning | warn) echo -e "${ORANGE}[ ⚠ ]${NC} $1" ;;
   ok | okey | done | success) echo -e "${GREEN}[ ✔ ]${NC} $1" ;;
-  DONE | OK) echo -e "${GREEN}[ ✔ ]$ $1 {NC}" ;;
+  DONE | OK) echo -e "${GREEN}[ ✔ ] $1 ${NC}" ;;
   info | inf | status) echo -e "${CYAN}[ i ]${NC} $1" ;;
   verbose | v | verb) echo -e "${GRAY}$1${NC}" ;;
   *) echo -e "$1" ;;
