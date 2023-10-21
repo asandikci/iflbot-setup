@@ -1,4 +1,4 @@
 #!/bin/bash
 # general configs
 
-# TODO: remove snap applications ant install firefox apt version
+# NOT IPLEMENTED YET, see ./../README.md
