@@ -30,4 +30,6 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
   - [ ] Auto login bot user
 - [ ] Disable annoying bell sound (in each restart)
 
+- [ ] ISSUE: mix 2 config file and resolve sudo issue
+
 - [ ] End-of-life after [LabManage](https://git.aliberksandikci.com.tr/asandikci/labmanage) application ready-to-use (WIP/private for now)

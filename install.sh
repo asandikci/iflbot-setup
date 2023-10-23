@@ -195,12 +195,19 @@ _install() {
       _log "Uygulamalar Yüklendi" info
     fi
   fi
-  if [ -f "$src_dir/config.sh" ]; then
+  if [ -f "$src_dir/user-config.sh" ]; then
     _log "Sistemi ayarlamak için ilgili yapılandırmaları yapmak istiyor musunuz?"
     if _checkanswer -eq 1; then
-      _log "Yapılandırmalar Uygulanıyor..." verbose
-      _sudo bash "$src_dir/config.sh"
-      _log "Yapılandırmalar Uygulandı" info
+      _log "Kullanıcı Yapılandırmaları (sudo gerektirmeyen) Uygulanıyor..." verbose
+      _sudo bash "$src_dir/user-config.sh"
+      _log "Kullanıcı Yapılandırmaları (sudo gerektirmeyen) Uygulandı..." info
+      
+      sleep 1 
+
+      _log "Root Yapılandırmaları Uygulanıyor..." verbose
+      _sudo bash "$src_dir/root-config.sh"
+      _log "Root Yapılandırmaları Uygulandı..." verbose
+
     fi
   fi
   if [ -f "$src_dir/system-refresh.sh" ]; then
