@@ -17,4 +17,4 @@ SUBLIME_CONFIG_FILE="/home/${user}/.config/sublime-text/Packages/User/"
 sudo cp "$1/sublime/gcc.sublime-build" "$SUBLIME_CONFIG_FILE"
 
 ### Desktop Files
-mv "$1/example/" "/home/${user}/Masaüstü/'C Kodları'/"  
+mv "$1/example/" "/home/${user}/Masaüstü/C Kodları/"  

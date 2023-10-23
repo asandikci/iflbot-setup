@@ -23,6 +23,9 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
 - GNU GPLv3+
 
 ### TODO
+- [ ] Auto Sleep 2H
+- [ ] Auto Dimming 2H
+- [ ] Default file assocation for Sublime text with .c, .cpp
 - [ ] Disable annoying bell sound (in each restart)
 - Firefox
   - [ ] Firefox Change MainPage

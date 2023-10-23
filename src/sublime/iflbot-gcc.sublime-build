@@ -8,7 +8,7 @@
         {
             "name": "Run in Terminal",
             "linux": {
-            	"shell_cmd": "gcc -fsanitize=address -fsanitize=undefined -Wall -Wshadow \"${file}\" -o \"${file_path}/${file_base_name}\" && echo Complied && time xfce4-terminal -e \"bash -c '\"${file_path}/${file_base_name}\" && echo && echo Press ENTER to continue && read line && exit'\""
+            	"shell_cmd": "gcc -fsanitize=address -fsanitize=undefined -Wall -Wshadow \"${file}\" -o \"${file_path}/${file_base_name}\" && echo Complied && time xfce4-terminal -e \"bash -c '\"${file_path}/${file_base_name}\" && echo && echo && echo --------------------------------- && echo Press ENTER to continue && read line && exit'\""
             },
         },
     ]
