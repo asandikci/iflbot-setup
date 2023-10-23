@@ -97,6 +97,7 @@ _checkinput() {
   [eE][vV]][eE][tT]) return 1 ;;
   [Yy]*) return 1 ;;
   [Ee]*) return 1 ;;
+  "" | " ") return 1 ;;
   n | N | H | h | *) return 0 ;;
   esac
 }

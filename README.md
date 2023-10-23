@@ -23,9 +23,11 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
 - [ ] XFCE General Configurations
   - [ ] Auto Sleep 2H
   - [ ] Auto Dimming 2H
-  - [ ] Dark Theme
+  - [x] Dark Theme
 - [ ] XFCE Panel Configurations
   - [ ] Panel Size: 28px
+- [ ] LightDM configurations
+  - [ ] Auto login bot user
 - [ ] Disable annoying bell sound (in each restart)
 
-- [ ] End-of-life after [LabManage](https://git.aliberksandikci.com.tr/asandikci/labmanage) application ready-to-use
+- [ ] End-of-life after [LabManage](https://git.aliberksandikci.com.tr/asandikci/labmanage) application ready-to-use (WIP/private for now)
