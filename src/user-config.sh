@@ -18,4 +18,7 @@ mkdir -p "$SUBLIME_CONFIG_FILE"
 sudo cp "$1/sublime/iflbot-gcc.sublime-build" "$SUBLIME_CONFIG_FILE"
 
 ### Desktop Files
-mv "$1/example/" "/home/${user}/Masaüstü/C_Kodları/"
+DESKTOP_CODE_FOLDER="/home/${user}/Masaüstü/C_Kodları/"
+if [ ! -d "$DESKTOP_CODE_FOLDER" ]; then
+  mv "$1/example/" "$DESKTOP_CODE_FOLDER"
+fi
