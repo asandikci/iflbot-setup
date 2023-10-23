@@ -155,16 +155,16 @@ _prechecks() {
     _log "MEB sertifikası indiriliyor..." verbose
     timeout 10 wget -qO "$temp_file" "http://sertifika.meb.gov.tr/MEB_SERTIFIKASI.cer" || (_log "Sertifikayı yüklemeye çalışırken bir hata oluştu" fatal)
 
-    echo ".cer uzantılı sertifika dosyası .crt uzantılı sertifika dosyasına dönüştürülüyor..." verbose
+    _log ".cer uzantılı sertifika dosyası .crt uzantılı sertifika dosyasına dönüştürülüyor..." verbose
     openssl x509 -inform DER -in "$temp_file" -out "$temp_file"
 
-    echo "Sertifika /usr/local/share/ca-certificates/ dizinine taşınıyor" verbose
+    _log "Sertifika /usr/local/share/ca-certificates/ dizinine taşınıyor" verbose
     sudo mv "$temp_file" "/usr/local/share/ca-certificates/MEB_SERTIFIKASI.crt"
 
-    echo "Sertifika dosyasına gerekli izinler veriliyor" verbose
+    _log "Sertifika dosyasına gerekli izinler veriliyor" verbose
     sudo chmod 644 /usr/local/share/ca-certificates/MEB_SERTIFIKASI.crt
 
-    echo "Sertifikalar yenileniyor..." verbose
+    _log "Sertifikalar yenileniyor..." verbose
     sudo update-ca-certificates
 
     _log "MEB Sertifikası başarılı bir şekilde kuruldu, Tarayıcılara manuel olarak eklemeniz gerekebilir" "done"
@@ -199,7 +199,7 @@ _install() {
     _log "Sistemi ayarlamak için ilgili yapılandırmaları yapmak istiyor musunuz?"
     if _checkanswer -eq 1; then
       _log "Kullanıcı Yapılandırmaları (sudo gerektirmeyen) Uygulanıyor..." verbose
-      bash "$src_dir/user-config.sh"
+      bash "$src_dir/user-config.sh" "$src_dir"
       _log "Kullanıcı Yapılandırmaları (sudo gerektirmeyen) Uygulandı..." info
       
       sleep 1 

@@ -11,6 +11,10 @@ xfconf-query -c "xsettings" -p "/Net/IconThemeName" -s "pardus-xfce-dark" --type
 # Panel Size
 xfconf-query --channel 'xfce4-panel' --property '/panels/panel-1/size' --type int --set 28 --create
 
-
-
 ### SUBLIME BUILDS
+user=$([ -n "$SUDO_USER" ] && echo "$SUDO_USER" || echo "$USER")
+SUBLIME_CONFIG_FILE="/home/${user}/.config/sublime-text/Packages/User/"
+sudo cp "$1/sublime/gcc.sublime-build" "$SUBLIME_CONFIG_FILE"
+
+### Desktop Files
+mv "$1/example/" "/home/${user}/Masaüstü/'C Kodları'/"  

@@ -12,7 +12,9 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
 - Install Apps: VSCodium, Sublime Text, Xournal++
 - Dark Theme
 - Panel Settings: 28px
-- Auto Login for user
+- Auto Login to user account
+- Ready to Use C/C++ Sublime Build Files
+- Sublime Build Configs for both file/terminal execution
 
 ### Compatibility
 - Pardus 23.0 XFCE
@@ -21,10 +23,6 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
 - GNU GPLv3+
 
 ### TODO
-- [ ] Sublime Build Configs
-
----
-
 - [ ] Disable annoying bell sound (in each restart)
 - Firefox
   - [ ] Firefox Change MainPage
