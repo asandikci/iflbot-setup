@@ -14,7 +14,8 @@ xfconf-query --channel 'xfce4-panel' --property '/panels/panel-1/size' --type in
 ### SUBLIME BUILDS
 user=$([ -n "$SUDO_USER" ] && echo "$SUDO_USER" || echo "$USER")
 SUBLIME_CONFIG_FILE="/home/${user}/.config/sublime-text/Packages/User/"
+mkdir -p "$SUBLIME_CONFIG_FILE"
 sudo cp "$1/sublime/iflbot-gcc.sublime-build" "$SUBLIME_CONFIG_FILE"
 
 ### Desktop Files
-mv "$1/example/" "/home/${user}/Masaüstü/C_Kodları/"  
+mv "$1/example/" "/home/${user}/Masaüstü/C_Kodları/"
