@@ -7,9 +7,11 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
 ```
 
 ### Features
-- MEB Certificate Installation
-- Auto Dark Theme
-- Auto Panel Settings: 28px
+- Auto MEB Certificate Installation
+- Install Prerequisites for Building C/C++ Code: gcc, g++, build-essential
+- Install Apps: VSCodium, Sublime Text, Xournal++
+- Dark Theme
+- Panel Settings: 28px
 
 ### Compatibility
 - Pardus 23.0 XFCE
