@@ -12,6 +12,7 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
 - Install Apps: VSCodium, Sublime Text, Xournal++
 - Dark Theme
 - Panel Settings: 28px
+- Auto Login for user
 
 ### Compatibility
 - Pardus 23.0 XFCE
@@ -20,7 +21,6 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
 - GNU GPLv3+
 
 ### TODO
-- [ ] AUTO LOGIN BOT USER
 - [ ] Sublime Build Configs
 
 ---
@@ -31,6 +31,7 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
   - [ ] Firefox Change Search Engine
   - [ ] Firefox Auto Import Certificate
   - [ ] Firefox Alt+Tab Last Viewed
+- [ ] Dark Theme Problems? Refresh?
 
 
 ---
@@ -42,6 +43,7 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
   - [ ] Auto Dimming 2H
   - [ ] Add Apps to Panel: VSCodium, SublimeText, Firefox, File Explorer
     - [ ] Also Favorite
+- [ ] Disable root login
 
 ---
 - [ ] Create Settings file (json?) for easy editing configs, apps etc. manually
