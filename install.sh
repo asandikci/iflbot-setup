@@ -226,7 +226,7 @@ _install() {
       sleep 60
       rm -rf "$temp_file" "$temp_dir"
       sleep 60
-      reboot
+      _sudo reboot
     fi
   fi
 
