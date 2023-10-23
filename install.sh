@@ -15,7 +15,7 @@ trap _cleanup EXIT
 ### VARIABLES ###
 #               #
 
-VERSION="23.10.21-0"
+VERSION="10.23-4"
 AUTHOR="asandikci"
 temp_file="$(mktemp -u)"
 temp_dir="$(mktemp -d)"

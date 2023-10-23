@@ -8,7 +8,8 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
 
 ### Features
 - MEB Certificate Installation
-- Auto Configurations
+- Auto Dark Theme
+- Auto Panel Settings: 28px
 
 ### Compatibility
 - Pardus 23.0 XFCE
@@ -17,18 +18,30 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
 - GNU GPLv3+
 
 ### TODO
-- [ ] Firefox Auto Configurations
-- [ ] Sublime Auto Configurations
-- [ ] VSCodium Auto Configurations 
-- [ ] XFCE General Configurations
+- [ ] AUTO LOGIN BOT USER
+- [ ] Sublime Build Configs
+
+---
+
+- [ ] Disable annoying bell sound (in each restart)
+- Firefox
+  - [ ] Firefox Change MainPage
+  - [ ] Firefox Change Search Engine
+  - [ ] Firefox Auto Import Certificate
+  - [ ] Firefox Alt+Tab Last Viewed
+
+
+---
+
+- [ ] Sublime Extra Configurations
+- [ ] VSCodium Auto Configurations
+- XFCE General Configurations
   - [ ] Auto Sleep 2H
   - [ ] Auto Dimming 2H
-  - [x] Dark Theme
-- [ ] XFCE Panel Configurations
-  - [ ] Panel Size: 28px
-- [ ] LightDM configurations
-  - [ ] Auto login bot user
-- [ ] Disable annoying bell sound (in each restart)
+  - [ ] Add Apps to Panel: VSCodium, SublimeText, Firefox, File Explorer
+    - [ ] Also Favorite
+
+---
 
 - [ ] ISSUE: mix 2 config file and resolve sudo issue
 

@@ -9,7 +9,7 @@ xfconf-query -c "xfwm4" -p "/general/theme" -s "pardus-xfce-dark" --type "string
 xfconf-query -c "xsettings" -p "/Net/IconThemeName" -s "pardus-xfce-dark" --type "string" --create
 
 # Panel Size
-xfconf-query --channel 'xfce4-panel' --property '/panels/panel-1/size' --type int --set 28
+xfconf-query --channel 'xfce4-panel' --property '/panels/panel-1/size' --type int --set 28 --create
 
 
 
