@@ -44,6 +44,8 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
     - [ ] Also Favorite
 
 ---
+- [ ] Create Settings file (json?) for easy editing configs, apps etc. manually
+- [ ] Sync Settings with GitHub/Website URL
 
 - [ ] ISSUE: mix 2 config file and resolve sudo issue
 
