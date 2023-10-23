@@ -3,11 +3,8 @@
 
 ### LIGHTDM
 # Auto Login
+AUTO_LOGIN_FILE=/usr/share/lightdm/lightdm.conf.d/99-pardus-lightdm-greeter-autologin.conf
 
-echo "$1"
-echo "$2"
-echo "$3"
-echo "$4"
-echo "$5"
-# user=$([ -n "$SUDO_USER" ] && echo "$SUDO_USER" || echo "$USER")
-# sed -i -e "s/autologin-user=.*/autologin-user=${user}/" /usr/share/lightdm/lightdm.conf.d/99-pardus-lightdm-greeter-autologin.conf
+sudo mv "$1/confi/lightdm-autologin" $AUTO_LOGIN_FILE
+user=$([ -n "$SUDO_USER" ] && echo "$SUDO_USER" || echo "$USER")
+sudo sed -i -e "s/autologin-user=.*/autologin-user=${user}/" $AUTO_LOGIN_FILE
