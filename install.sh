@@ -205,7 +205,7 @@ _install() {
       sleep 1 
 
       _log "Root Yapılandırmaları Uygulanıyor..." verbose
-      _sudo bash "$src_dir/root-config.sh"
+      _sudo bash "$src_dir/root-config.sh" "$src_dir"
       _log "Root Yapılandırmaları Uygulandı..." info
 
     fi
