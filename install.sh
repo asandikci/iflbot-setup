@@ -199,14 +199,14 @@ _install() {
     _log "Sistemi ayarlamak için ilgili yapılandırmaları yapmak istiyor musunuz?"
     if _checkanswer -eq 1; then
       _log "Kullanıcı Yapılandırmaları (sudo gerektirmeyen) Uygulanıyor..." verbose
-      _sudo bash "$src_dir/user-config.sh"
+      bash "$src_dir/user-config.sh"
       _log "Kullanıcı Yapılandırmaları (sudo gerektirmeyen) Uygulandı..." info
       
       sleep 1 
 
       _log "Root Yapılandırmaları Uygulanıyor..." verbose
       _sudo bash "$src_dir/root-config.sh"
-      _log "Root Yapılandırmaları Uygulandı..." verbose
+      _log "Root Yapılandırmaları Uygulandı..." info
 
     fi
   fi
