@@ -1,5 +1,5 @@
 {
-	"shell_cmd": "gcc -fsanitize=address -fsanitize=undefined -Wall -Wshadow \"${file}\" -o \"${file_path}/${file_base_name}\" && echo Complied && time timeout 5  \"${file_path}/${file_base_name}\" <in.txt >out.txt || echo -e \"!!! Kodun çalışma Süresi 5 Saniyeyi Aştı !!!\"",
+	"shell_cmd": "gcc -lm -fsanitize=address -fsanitize=undefined -Wall -Wshadow \"${file}\" -o \"${file_path}/${file_base_name}\" && echo Complied && time timeout 5  \"${file_path}/${file_base_name}\" <in.txt >out.txt || echo -e \"!!! Kodun çalışma Süresi 5 Saniyeyi Aştı !!!\"",
 	"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
 	"working_dir": "${file_path}",
 	"selector": "source.c",
@@ -8,7 +8,7 @@
         {
             "name": "Run in Terminal",
             "linux": {
-            	"shell_cmd": "gcc -fsanitize=address -fsanitize=undefined -Wall -Wshadow \"${file}\" -o \"${file_path}/${file_base_name}\" && echo Complied && time xfce4-terminal -e \"bash -c '\"${file_path}/${file_base_name}\" && echo && echo && echo --------------------------------- && echo Press ENTER to continue && read line && exit'\""
+            	"shell_cmd": "gcc -lm -fsanitize=address -fsanitize=undefined -Wall -Wshadow \"${file}\" -o \"${file_path}/${file_base_name}\" && echo Complied && time xfce4-terminal -e \"bash -c '\"${file_path}/${file_base_name}\" && echo && echo && echo --------------------------------- && echo Press ENTER to continue && read line && exit'\""
             },
         },
     ]
