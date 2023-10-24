@@ -10,11 +10,12 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
 - Auto MEB Certificate Installation
 - Install Prerequisites for Building C/C++ Code: gcc, g++, build-essential
 - Install Apps: VSCodium, Sublime Text, Xournal++
+- Ready to Use C/C++ Sublime Build Files for both file/terminal execution
 - Dark Theme
 - Panel Settings: 28px
 - Auto Login to user account
-- Ready to Use C/C++ Sublime Build Files
-- Sublime Build Configs for both file/terminal execution
+- Screen Auto Dimming: 1H, Screen Auto Off: 2H
+
 
 ### Compatibility
 - Pardus 23.0 XFCE
@@ -23,8 +24,8 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
 - GNU GPLv3+
 
 ### TODO
-- [ ] Auto Sleep 2H
-- [ ] Auto Dimming 2H
+- [ ] Add Apps to Panel: VSCodium, SublimeText, Firefox, File Explorer
+  - [ ] Also Favorite
 - [ ] Default file assocation for Sublime text with .c, .cpp
 - [ ] Disable annoying bell sound (in each restart)
 - Firefox
@@ -42,8 +43,6 @@ wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.
 - XFCE General Configurations
   - [ ] Auto Sleep 2H
   - [ ] Auto Dimming 2H
-  - [ ] Add Apps to Panel: VSCodium, SublimeText, Firefox, File Explorer
-    - [ ] Also Favorite
 - [ ] Disable root login
 
 ---

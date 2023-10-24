@@ -11,6 +11,10 @@ xfconf-query -c "xsettings" -p "/Net/IconThemeName" -s "pardus-xfce-dark" --type
 # Panel Size
 xfconf-query --channel 'xfce4-panel' --property '/panels/panel-1/size' --type int --set 28 --create
 
+# Power Settings
+xfconf-query --channel 'xfce4-power-manager' --property '/xfce4-power-manager/blank-on-ac' --type int --set 60 --create
+xfconf-query --channel 'xfce4-power-manager' --property '/xfce4-power-manager/inactivity-on-ac' --type int --set 60 --create
+
 ### SUBLIME BUILDS
 user=$([ -n "$SUDO_USER" ] && echo "$SUDO_USER" || echo "$USER")
 SUBLIME_CONFIG_FILE="/home/${user}/.config/sublime-text/Packages/User/"
@@ -22,3 +26,4 @@ DESKTOP_CODE_FOLDER="/home/${user}/Masaüstü/C_Kodları/"
 if [ ! -d "$DESKTOP_CODE_FOLDER" ]; then
   mv "$1/example/" "$DESKTOP_CODE_FOLDER"
 fi
+
