@@ -1,5 +1,8 @@
 ## Izmir Science High School - Computer Lab Setup Script
+> İzmir Fen Lisesi Bilgisayar Laboratuvarı Kurulum Betiği
 > Install prerequisites, applications, tools; set up configs etc.
+
+<div class="meta_for_parser tablespecs" style="visibility:hidden">This is an Mirror, see original upstream in <a href="https://git.aliberksandikci.com.tr/ifl/iflbot-setup">Forgejo</a></div>
 
 ### Download & Install
 ```bash
