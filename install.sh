@@ -1,7 +1,7 @@
 #!/bin/bash
 # Izmir Science High School - Computer Lab Setup Script
 # Install prerequisites, applications, tools; set up configs etc.
-# 2022 - 2023 © Aliberk Sandıkçı
+# 2022 - 2024 © Aliberk Sandıkçı
 
 # run quickly:
 # wget -qO- https://raw.githubusercontent.com/asandikci/iflbot-setup/main/install.sh | bash <(cat) </dev/tty
@@ -153,7 +153,7 @@ _prechecks() {
   _log "Eğer Fatih/MEB internetine ethernet ile bağlı iseniz Sertifika kurmanız gerekebilir. Sertifikayı kurmak istiyor musunuz?" warn
   if _checkanswer -eq 1; then
     _log "MEB sertifikası indiriliyor..." verbose
-    timeout 10 wget -qO "$temp_file" "http://sertifika.meb.gov.tr/MEB_SERTIFIKASI.cer" || (_log "Sertifikayı yüklemeye çalışırken bir hata oluştu" fatal)
+    timeout 10 wget --no-check-certificate -qO "$temp_file" "https://sertifika.meb.gov.tr/MEB_SERTIFIKASI.cer" || (_log "Sertifikayı yüklemeye çalışırken bir hata oluştu" fatal)
 
     _log ".cer uzantılı sertifika dosyası .crt uzantılı sertifika dosyasına dönüştürülüyor..." verbose
     openssl x509 -inform DER -in "$temp_file" -out "$temp_file"
